@@ -20,11 +20,13 @@ class CalculatorViewController: UIViewController {
    
     //VAR
     
-    var splitNumber: Int = 0
+    var percentageAmount: Int = 0
     
     //ACTIONS
     
     @IBAction func tipChanged(_ sender: UIButton) {
+        
+        billTextField.endEditing(true)
         
         if sender.tag == 0{
             
@@ -43,8 +45,9 @@ class CalculatorViewController: UIViewController {
             zeroPctButton.isSelected = false
             tenPctButton.isSelected = false
             twentyPctButton.isSelected = true
-            
         }
+        
+        percentageAmount = sender.tag
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
@@ -55,6 +58,13 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
+        
+        if billTextField.text != nil {
+            
+            //print(billTextField.text!)
+            
+        }
+        
     }
     
 }
