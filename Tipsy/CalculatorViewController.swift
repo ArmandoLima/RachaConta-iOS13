@@ -22,6 +22,25 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func tipChanged(_ sender: UIButton) {
         
+        if sender.tag == 0{
+            
+            zeroPctButton.isSelected = true
+            tenPctButton.isSelected = false
+            twentyPctButton.isSelected = false
+            
+        }else if sender.tag == 10{
+            
+            zeroPctButton.isSelected = false
+            tenPctButton.isSelected = true
+            twentyPctButton.isSelected = false
+            
+        }else if sender.tag == 20{
+            
+            zeroPctButton.isSelected = false
+            tenPctButton.isSelected = false
+            twentyPctButton.isSelected = true
+            
+        }
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
